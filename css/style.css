@@ -3,3 +3,136 @@
   padding: 0;
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: unset;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+  --greyColor:#353a40;
+  --footer1:#1c3643;
+  --footer2:#1e5372;
+  --javascript:#fec107;
+  --react:#17a2b7;
+  --startup:#dd3546;
+  --negocios:#6c757c;
+  --submit:#96c93e;
+  --comprarTickets:#28a744;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.header{
+  width: 100%;
+  background-color: var(--greyColor);
+}
+
+.header__navBar{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.brand__logo{
+  display: flex;
+}
+.brand__logo img{
+  width: 80px;
+  height: auto;
+}
+.brand__name{
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.header__hero{
+  background-color: #96c93e;
+  min-height: 480px;
+  height: calc(100vh - 80px);
+  background-image: url(../assets/img/ba1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.header__hero::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a1;
+}
+.hero{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  text-align: right;
+  color: white;
+  position: relative;
+}
+.hero__title{
+  font-size: 28px;
+}
+.hero__text{
+  width: 50%;
+  line-height: 25px;
+}
+.hero__buttons{
+  display: flex;
+  gap: 20px;
+}
+
+.button{
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.button--green{
+  border: none;
+  background-color: var(--comprarTickets);
+}
+.menu{
+  height: 100%;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-evenly;
+}
+
+.menu__item{
+  color: #9e9e9e;
+}
+.menu__item--active{
+  color: white;
+}
+.menu__item--green{
+  color: var(--comprarTickets);
+}
+footer{
+  width: 100%;
+  background: rgb(63,94,251);
+  background: linear-gradient(90deg, var(--footer1) 0%, var(--footer2) 100%);
+}
+
+.container--footer{
+  height: 80px;
+}
+.menu--footer{
+  gap: 0;
+}

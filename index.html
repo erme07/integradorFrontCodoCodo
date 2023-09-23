@@ -15,10 +15,10 @@
       </div>
       <nav>
         <ul class="menu">
-          <li><a href="" class="menu__item menu__item--active">La conferencia</a></li>
-          <li><a href="" class="menu__item">Los oradores</a></li>
-          <li><a href="" class="menu__item">El lugar y la fecha</a></li>
-          <li><a href="" class="menu__item">Conviertete en orador</a></li>
+          <li><a href="#" class="menu__item menu__item--active">La conferencia</a></li>
+          <li><a href="#oradores" class="menu__item">Los oradores</a></li>
+          <li><a href="#lugarFecha" class="menu__item">El lugar y la fecha</a></li>
+          <li><a href="#convierteteOrador" class="menu__item">Conviertete en orador</a></li>
           <li><a href="" class="menu__item menu__item--green">Comprar tickets</a></li>
         </ul>
       </nav>
@@ -36,31 +36,45 @@
     </section>
   </header>
   <main>
-    <section>
-      <h2><span>Conoce a los </span>oradores</h2>
-      <div>
-        <img src="./assets/img/steve.jpg" alt="Imagen de presentación de Steve Jobs">
-        <h4>Javascript</h4>
-        <h4>React</h4>
-        <h3>Steve Jobs</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatibus reiciendis dignissimos, nostrum quas est facilis fugiat. Neque omnis quibusdam molestias fugiat cupiditate illo nobis repellendus velit beatae et. Exercitationem?</p>
-      </div>
-      <div>
-        <img src="./assets/img/bill.jpg" alt="Imagen de presentación de Bill Gates">
-        <h4>Javascript</h4>
-        <h4>React</h4>
-        <h3>Bill Gates</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatibus reiciendis dignissimos, nostrum quas est facilis fugiat. Neque omnis quibusdam molestias fugiat cupiditate illo nobis repellendus velit beatae et. Exercitationem?</p>
-      </div>
-      <div>
-        <img src="./assets/img/ada.jpeg" alt="Imagen de presentación de Ada Lovelace">
-        <h4>Negocios</h4>
-        <h4>Startups</h4>
-        <h3>Ada Lovelace</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatibus reiciendis dignissimos, nostrum quas est facilis fugiat. Neque omnis quibusdam molestias fugiat cupiditate illo nobis repellendus velit beatae et. Exercitationem?</p>
+    <section id="oradores" class="container section">
+      <h2 class="section__title"><div class="section__title--small">Conoce a los </div>oradores</h2>
+      <div class="section__content">
+        <div class="card">
+          <img class="card__image" src="./assets/img/steve.jpg" alt="Imagen de presentación de Steve Jobs">
+          <div class="card__content">
+            <div class="tags">
+              <h4 class="card__tag card__tag--javascript">Javascript</h4>
+              <h4 class="card__tag card__tag--react">React</h4>
+            </div>
+            <h3 class="card__name">Steve Jobs</h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis animi eius quibusdam esse veniam, velit voluptate ipsum sint. Beatae excepturi aut quis incidunt nostrum!</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="./assets/img/bill.jpg" alt="Imagen de presentación de Steve Jobs">
+          <div class="card__content">
+            <div class="tags">
+              <h4 class="card__tag card__tag--javascript">Javascript</h4>
+              <h4 class="card__tag card__tag--react">React</h4>
+            </div>
+            <h3 class="card__name">Bill Gates</h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis animi eius quibusdam esse veniam, velit voluptate ipsum sint. Beatae excepturi aut quis incidunt nostrum!</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="./assets/img/ada.jpeg" alt="Imagen de presentación de Steve Jobs">
+          <div class="card__content">
+            <div class="tags">
+              <h4 class="card__tag">Negocios</h4>
+              <h4 class="card__tag card__tag--startup">Startups</h4>
+            </div>
+            <h3 class="card__name">Ada Lovelace</h3>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis animi eius quibusdam esse veniam, velit voluptate ipsum sint. Beatae excepturi aut quis incidunt nostrum!</p>
+          </div>
+        </div>
       </div>
     </section>
-    <section>
+    <section id="lugarFecha">
       <div></div>
       <section>
         <h2>Bas As - Octubre</h2>
@@ -68,7 +82,7 @@
         <a href="">Conocé más</a>
       </section>
     </section>
-    <section>
+    <section id="convierteteOrador">
       <h2><span>conviertete en un </span>orador</h2>
       <p>Anótate como orador para dar una <span>charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
       <form action="">

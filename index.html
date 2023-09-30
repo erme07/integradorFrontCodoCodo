@@ -37,10 +37,10 @@
   </header>
   <main>
     <section id="oradores" class="container oradores">
-      <h2 class="oradores__title"><div class="oradores__title--small">Conoce a los </div>oradores</h2>
+      <h2 class="oradores__title"><span class="oradores__title--small">Conoce a los </span>oradores</h2>
       <div class="oradores__content">
         <div class="card">
-          <img class="card__image" src="./assets/img/steve.jpg" alt="Imagen de presentación de Steve Jobs">
+          <img class="card__image" src="./assets/img/steve.jpg" alt="Imagen de presentación de Steve Jobs" loading="lazy">
           <div class="card__content">
             <div class="tags">
               <h4 class="card__tag card__tag--javascript">Javascript</h4>
@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="card">
-          <img class="card__image" src="./assets/img/bill.jpg" alt="Imagen de presentación de Steve Jobs">
+          <img class="card__image" src="./assets/img/bill.jpg" alt="Imagen de presentación de Steve Jobs" loading="lazy">
           <div class="card__content">
             <div class="tags">
               <h4 class="card__tag card__tag--javascript">Javascript</h4>
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="card">
-          <img class="card__image" src="./assets/img/ada.jpeg" alt="Imagen de presentación de Steve Jobs">
+          <img class="card__image" src="./assets/img/ada.jpeg" alt="Imagen de presentación de Steve Jobs" loading="lazy">
           <div class="card__content">
             <div class="tags">
               <h4 class="card__tag">Negocios</h4>
@@ -82,17 +82,21 @@
         <a href="" class="button button--small">Conocé más</a>
       </div>
     </section>
-    <section id="convierteteOrador">
-      <h2><span>conviertete en un </span>orador</h2>
-      <p>Anótate como orador para dar una <span>charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
-      <form action="">
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Apellido">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Sobre qué quieres hablar?"></textarea>
-        <p>Recuerda incluir un título para tu charla</p>
-        <input type="submit" value="Enviar">
-      </form>
+
+    <section id="convierteteOrador" class="container">
+      <div class="contact">
+        <h2 class="contact__title"><span class="contact__title--small">conviertete en un </span>orador</h2>
+        <p class="contact__subtitle">Anótate como orador para dar una <span>charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
+        <form action="" class="contact__form">
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="Apellido">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Sobre qué quieres hablar?"></textarea>
+          <p>Recuerda incluir un título para tu charla</p>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
     </section>
+
   </main>
   <aside>
     <p>publicidad a libre eleccion</p>

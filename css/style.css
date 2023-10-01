@@ -34,6 +34,7 @@ body{
 .header{
   width: 100%;
   background-color: var(--greyColor);
+  position: relative;
 }
 
 .header__navBar{
@@ -119,8 +120,6 @@ body{
   list-style: none;
   display: flex;
   align-items: center;
-  /* gap: 18px; */
-  /* gap: 8px; */
   justify-content: space-evenly;
 }
 
@@ -246,7 +245,9 @@ body{
 
 
 .contact{
-  width: 60%;
+  /* width: 60%; */
+  max-width: 700px;
+  width: 95%;
   margin: auto;
   display: flex;
   gap: 10px;
@@ -308,19 +309,74 @@ footer{
   gap: 0;
   color: white;
   font-size: 1.3rem;
+  flex-wrap: wrap;
 }
 .underline{
   text-decoration: underline dotted;
 }
+.item-display{
+  display: block;
+}
+
+
+.burguer{
+  display: none;
+}
+svg{
+  width: 30px;
+  cursor: pointer;
+}
+
+svg path{
+  stroke-width: 30;
+  stroke-linecap: round;
+  stroke: #fff;
+  fill: none;
+  transition: all .5s ease-in-out;
+}
+
+/* In menu form */
+
+.top_bar,
+.bottom_bar{
+  stroke-dasharray: 240px 910px;
+}
+
+.middle_bar{
+  stroke-dasharray: 240px 240px;
+}
+
+/* In cross form */
+
+.open .top_bar,
+.open .bottom_bar{
+  stroke-dashoffset: -650px;
+}
+
+.open .middle_bar{
+  stroke-dasharray: 0px 220px;
+  stroke-dashoffset: -120px;
+}
+
+
 @media screen and (max-width:1200px) {
   .container{
     width: 992px;
   }
+  .brand{
+    gap: 10px;
+  }
+  .brand__logo img{
+    width: 75px;
+  }
+  .brand__name{
+    font-size: 1.8rem
+  }
+  .menu{
+    font-size: 1.4rem;
+  }
   .card{
     flex-basis: 250px;
-  }
-  .contact{
-    width: 70%;
   }
 }
 
@@ -328,12 +384,36 @@ footer{
   .container{
     width: 100%;
   }
+  /* .menu{
+    display: none;
+  } */
+  .burguer{
+    display: block;
+  }
+  .header nav{
+    background-color: var(--greyColor);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 300px;
+    height: calc(100vh - 80px);
+    z-index: 2;
+  }
+  .header .menu{
+    flex-direction: column;
+  }
   .hero__text{
     width: 60%;
   }
   .card{
     flex-basis: 30%;
     max-width: 250px;
+  }
+  .lugarFecha{
+    height: 350px;
+  }
+  .menu--footer{
+    display: flex;
   }
 }
 
@@ -350,17 +430,74 @@ footer{
   .card__content{
     padding: 15px;
   }
-  .menu{
-    display: none;
+  
+  .lugarFecha{
+    height: auto;
+  }
+  .lugarFecha__image{
+    flex-basis: 45%;
+  }
+  .lugarFecha__content{
+    flex-basis: 55%;
+  }
+  .container--footer{
+    height: auto;
+  }
+  .menu--footer{
+    
+    gap: 10px 20px;
+    font-size: 1.2rem;
+  }
+  .item-display{
+    display: inline;
   }
 }
 
 @media screen and (max-width:576px) {
+  .header nav{
+    width: 100%;
+  }
+  .hero{
+    align-items: center;
+  }
   .hero__text{
+    text-align: left;
+    width: 90%;
+  }
+  .hero__buttons{
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero__buttons .button{
     width: 80%;
+    text-align: center;
   }
   .card{
     max-width: 90%;
     flex-basis: 90%;
+  }
+  .lugarFecha{
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .lugarFecha__image{
+    /* background: linear-gradient(to top, var(--greyColor) 0%, transparent 50%), url(../assets/img/honolulu.jpg);
+    background-size: cover;
+    background-position: center; */
+    flex-basis: 100%;
+    height: 60vw;
+  }
+  .lugarFecha__content{
+    flex-basis: 100%;
+  }
+
+
+  .contact__form{
+    gap: 10px;
+  }
+  .contact__form input{
+    width: calc(50% - 5px);
   }
 }

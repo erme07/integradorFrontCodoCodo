@@ -119,12 +119,18 @@ body{
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 18px;
+  /* gap: 18px; */
+  /* gap: 8px; */
   justify-content: space-evenly;
 }
 
 .menu__item{
   color: #9e9e9e;
+  padding: 10px;
+  transition: background .3s;
+}
+.menu__item:hover{
+  background-color: #2b2e33;
 }
 .menu__item--active{
   color: white;
@@ -143,6 +149,7 @@ body{
   text-align: center;
   text-transform: uppercase;
   font-size: 2.6rem;
+  color: #202529;
 }
 .oradores__title--small, .contact__title--small{
   font-size: 1.2rem;
@@ -153,11 +160,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 25px;
 }
 .card{
-  width: 300px;
-  flex-basis: 26%;
+  /* width: 300px;
+  flex-grow: 1; */
+  flex-basis: 300px;
   border: 1px solid #dcdcdc;
 }
 .card__image{
@@ -237,7 +246,7 @@ body{
 
 
 .contact{
-  width: 700px;
+  width: 60%;
   margin: auto;
   display: flex;
   gap: 10px;
@@ -253,6 +262,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   gap: 15px 30px;
+  color: #858585;
 }
 
 .contact__form input{
@@ -268,8 +278,10 @@ body{
 }
 .contact__form textarea{
   flex-basis: 100%;
+  height: 100px;
   border: 1px solid #dcdcdc;
-  padding: 10px;
+  font-size: 1.8rem;
+  padding: 10px 15px;
   border-radius: 3px;
 }
 .contact__form input:last-child{
@@ -277,6 +289,12 @@ body{
   height: 40px;
   color: white;
   background-color: var(--submit);
+}
+.contact__subtitle{
+  font-size: 1.3rem;
+}
+.contact__form p{
+  margin-top: -10px;
 }
 footer{
   width: 100%;
@@ -291,10 +309,18 @@ footer{
   color: white;
   font-size: 1.3rem;
 }
-
+.underline{
+  text-decoration: underline dotted;
+}
 @media screen and (max-width:1200px) {
   .container{
     width: 992px;
+  }
+  .card{
+    flex-basis: 250px;
+  }
+  .contact{
+    width: 70%;
   }
 }
 
@@ -302,7 +328,39 @@ footer{
   .container{
     width: 100%;
   }
+  .hero__text{
+    width: 60%;
+  }
   .card{
-    flex-basis: 250px;
+    flex-basis: 30%;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .hero__text{
+    width: 70%;
+    line-height: 1.3;
+  }
+  .card{
+    max-width: 222px;
+    min-width: 195px;
+    flex-grow: 1;
+  }
+  .card__content{
+    padding: 15px;
+  }
+  .menu{
+    display: none;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .hero__text{
+    width: 80%;
+  }
+  .card{
+    max-width: 90%;
+    flex-basis: 90%;
   }
 }

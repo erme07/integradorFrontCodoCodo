@@ -8,6 +8,10 @@ Este proyecto consiste en lograr maquetar una web en base a un layout provisto m
 - Diseño responsivo
 - Desktop first
 
+## Link al proyecto
+
+[DEMO](https://erme07.github.io/integradorFrontCodoCodo/)
+
 ## Layout
 
 ![Maqueta](./assets/img/final_front.jpg)

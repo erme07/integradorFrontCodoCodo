@@ -1,4 +1,4 @@
-# integradorFrontCodoCodo
+# Proyecto integrador Front Codo a Codo
 
 Este proyecto consiste en lograr maquetar una web en base a un layout provisto mediante una imagen, respetando el diseño al máximo posible
 

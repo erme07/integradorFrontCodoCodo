@@ -1,6 +1,26 @@
-const menu = document.querySelector("svg");
-menu.addEventListener("click", morph);
+const menuButton = document.querySelector("svg");
+const menu = document.getElementById("menu");
+const nav = document.getElementById("navBar");
 
-function morph() {
-  menu.classList.toggle("open");
-}
+let posicionY = 0;
+
+
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".menu__item")) {
+    menuButton.classList.remove("open");
+    menu.classList.remove("menu--visible");
+  }
+  if (e.target.matches('.burguer') || e.target.matches('.burguer *')) {
+    menuButton.classList.toggle("open");
+    menu.classList.toggle("menu--visible")
+  }
+})
+
+document.addEventListener('scroll', () => {
+  if (posicionY > scrollY) {
+    nav.classList.add('navBar--sticky');
+  } else {
+    nav.classList.remove('navBar--sticky');
+  }
+  posicionY = scrollY;
+})

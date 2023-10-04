@@ -8,39 +8,38 @@
   <script src="./js/script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <section class="container header__navBar">
-      <div class="brand">
+  <nav class="navBar" id="navBar">
+    <div class="container">
+      <div class="navBar__brand">
         <a href="" class="brand__logo"><img src="./assets/img/codoacodo.png" alt="Logo de Codo a Codo"></a>
         <h2 class="brand__name">Conf Bs As</h2>
       </div>
-      <nav class="">
-        <ul class="menu">
-          <li><a href="#" class="menu__item menu__item--active">La conferencia</a></li>
-          <li><a href="#oradores" class="menu__item">Los oradores</a></li>
-          <li><a href="#lugarFecha" class="menu__item">El lugar y la fecha</a></li>
-          <li><a href="#convierteteOrador" class="menu__item">Conviertete en orador</a></li>
-          <li><a href="" class="menu__item menu__item--green">Comprar tickets</a></li>
-        </ul>
-      </nav>
+      <ul class="menu" id="menu">
+        <li><a href="#" class="menu__item menu__item--active">La conferencia</a></li>
+        <li><a href="#oradores" class="menu__item">Los oradores</a></li>
+        <li><a href="#lugarFecha" class="menu__item">El lugar y la fecha</a></li>
+        <li><a href="#convierteteOrador" class="menu__item">Conviertete en orador</a></li>
+        <li><a href="" class="menu__item menu__item--green">Comprar tickets</a></li>
+      </ul>
       <svg viewBox="250 200 350 250" class="burguer">
         <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
         <path d="M300,320 L540,320" class="middle_bar" />
         <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom_bar" transform="translate(480, 320) scale(1, -1) translate(-480, -318)" />
       </svg>
-    </section>
-    <section class="header__hero">
-      <div class="container hero">
-        <h1 class="hero__title">Conf Bs As</h1>
-        <p class="hero__text">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimientos y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
-        <div class="hero__buttons">
-          <a href="" class="button">Quiero ser orador</a>
-          <a href="" class="button button--green">Comprar tickets</a>
-        </div>
-        
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1 class="hero__title">Conf Bs As</h1>
+      <p class="hero__text">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimientos y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+      <div class="hero__buttons">
+        <a href="#convierteteOrador" class="button">Quiero ser orador</a>
+        <a href="#" class="button button--green">Comprar tickets</a>
       </div>
-    </section>
+    </div>
   </header>
+
   <main>
     <section id="oradores" class="container oradores">
       <h2 class="oradores__title"><span class="oradores__title--small">Conoce a los </span>oradores</h2>

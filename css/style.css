@@ -3,17 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-a{
-  text-decoration: none;
-  color: unset;
-}
-body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 :root{
   --greyColor:#353a40;
   --footer1:#1c3643;
@@ -24,6 +13,17 @@ body{
   --negocios:#6c757c;
   --submit:#96c93e;
   --comprarTickets:#28a744;
+  --navBarHeight:80px
+}
+
+html {font-size: 62.5%; scroll-behavior: smooth;}
+a {text-decoration: none; color: unset;}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 .container{
   width: 1200px;
@@ -31,44 +31,69 @@ body{
   padding: 15px;
 }
 
-.header{
+
+/*::::::::: Estilos para el navbar ::::::::::*/
+
+.navBar{
   width: 100%;
   background-color: var(--greyColor);
-  position: relative;
+  position: sticky;
+  top: calc(var(--navBarHeight) * -1);
+  transition: top .3s ease-in-out;
 }
-
-.header__navBar{
-  height: 80px;
+.navBar--sticky {top: 0;}
+.navBar .container{
+  height: var(--navBarHeight);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.brand{
+.navBar__brand{
   display: flex;
   gap: 15px;
   align-items: center;
 }
-.brand__logo{
-  display: flex;
-}
-.brand__logo img{
-  width: 80px;
-  height: auto;
-}
+.brand__logo {display: flex;}
+.brand__logo img {width: 80px; height: auto;}
 .brand__name{
   color: white;
   font-size: 2rem;
   font-weight: lighter;
 }
-.header__hero{
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+/*::::::::: Icono para "Menu Hamburguesa" ::::::::::*/
+
+.burguer {width: 30px; cursor: pointer; display: none;}
+.burguer path{
+  stroke-width: 30;
+  stroke-linecap: round;
+  stroke: #fff;
+  fill: none;
+  transition: all .5s ease-in-out;
+}
+/* Forma de "Hamburguesa" */
+.top_bar,
+.bottom_bar {stroke-dasharray: 240px 910px;}
+.middle_bar {stroke-dasharray: 240px 240px;}
+/* Forma de cruz*/
+.open .top_bar,
+.open .bottom_bar {stroke-dashoffset: -650px;}
+.open .middle_bar {stroke-dasharray: 0px 220px; stroke-dashoffset: -120px;}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+/*::::::::: estilos para seccion del header ::::::::::*/
+
+.hero{
   background: linear-gradient(to right , #000000a1 , #000000a1), url(../assets/img/ba1.jpg);
   min-height: 480px;
   height: calc(100vh - 80px);
   background-size: cover;
-  background-position: center;
+  background-position: 50% 73%;
 }
-
-.hero{
+.hero .container{
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -77,20 +102,11 @@ body{
   gap: 20px;
   text-align: right;
   color: white;
-  position: relative;
   font-size: 1.6rem;
 }
-.hero__title{
-  font-size: 2.8rem;
-}
-.hero__text{
-  width: 50%;
-  line-height: 1.6;
-}
-.hero__buttons{
-  display: flex;
-  gap: 20px;
-}
+.hero__title {font-size: 2.8rem;}
+.hero__text {width: 50%; line-height: 1.6;}
+.hero__buttons {display: flex; gap: 20px;}
 
 .button{
   padding: 10px;
@@ -98,16 +114,10 @@ body{
   border-radius: 5px;
   transition: background .5s;
 }
-.button:hover{
-  background-color: rgba(0, 0, 0, 0.651);
-}
-.button--green{
-  border: none;
-  background-color: var(--comprarTickets);
-}
-.button--green:hover{
-  background-color: #009721;
-}
+.button:hover {background-color: rgba(0, 0, 0, 0.651);}
+.button--green {border: none; background-color: var(--comprarTickets);}
+.button--green:hover {background-color: #009721;}
+
 .button--small{
   padding: 5px;
   line-height: initial;
@@ -128,15 +138,13 @@ body{
   padding: 10px;
   transition: background .3s;
 }
-.menu__item:hover{
-  background-color: #2b2e33;
-}
-.menu__item--active{
-  color: white;
-}
-.menu__item--green{
-  color: var(--comprarTickets);
-}
+.menu__item:hover {background-color: #2b2e33;}
+.menu__item--active {color: white;}
+.menu__item--green {color: var(--comprarTickets);}
+
+
+
+/*::::::::: estilos para seccion de cards ::::::::::*/
 
 .oradores{
   display: flex;
@@ -162,26 +170,25 @@ body{
   flex-wrap: wrap;
   gap: 25px;
 }
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+/*::::::::: estilos para seccion de cards ::::::::::*/
+
 .card{
-  /* width: 300px;
-  flex-grow: 1; */
   flex-basis: 300px;
   border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.card__image{
-  width: 100%;
-  height: auto;
-}
+.card__image {width: 100%; height: auto;}
 .card__content{
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-.tags{
-  display: flex;
-  gap:5px;
-}
+.tags {display: flex; gap:5px;}
 .card__tag{
   padding: 5px;
   border-radius: 5px;
@@ -189,16 +196,9 @@ body{
   background-color: var(--negocios);
   font-size: 1.1rem;
 }
-.card__tag--javascript{
-  background-color: var(--javascript);
-  color: black;
-}
-.card__tag--react{
-  background-color: var(--react);
-}
-.card__tag--startup{
-  background-color: var(--startup);
-}
+.card__tag--javascript {background-color: var(--javascript); color: black;}
+.card__tag--react {background-color: var(--react);}
+.card__tag--startup {background-color: var(--startup);}
 .card__name{
   margin-bottom: 10px;
   font-weight: lighter;
@@ -209,13 +209,16 @@ body{
   line-height: 1.6;
   color: #6b6b6b;
 }
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
+
+/*::::::::: estilos para seccion de "Lugar y fecha" ::::::::::*/
 
 .lugarFecha{
   display: flex;
   background-color: var(--greyColor);
   height: 400px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .lugarFecha__image{
   background-image: url(../assets/img/honolulu.jpg);
@@ -234,18 +237,14 @@ body{
   font-size: 1.1rem;
   
 }
-.lugarFecha__content h2{
-  font-size: 2rem;
-}
-.lugarFecha__content p{
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
+.lugarFecha__content h2 {font-size: 2rem;}
+.lugarFecha__content p {font-size: 1.1rem; line-height: 1.8;}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
+/*::::::::: estilos para seccion de "contacto" ::::::::::*/
 
 .contact{
-  /* width: 60%; */
   max-width: 700px;
   width: 95%;
   margin: auto;
@@ -253,19 +252,14 @@ body{
   gap: 10px;
   flex-direction: column;
 }
-.contact__title{
-  text-align: center;
-}
-.contact__subtitle{
-  text-align: center;
-}
+.contact__title {text-align: center;}
+.contact__subtitle {text-align: center;}
 .contact__form{
   display: flex;
   flex-wrap: wrap;
   gap: 15px 30px;
   color: #858585;
 }
-
 .contact__form input{
   height: 30px;
   width: calc(50% - 15px);
@@ -273,10 +267,8 @@ body{
   border: 1px solid #dcdcdc;
   padding: 0 10px;
 }
-
-.contact__form input:focus-visible, .contact__form textarea:focus-visible{
-  outline: 1px solid #929292;
-}
+.contact__form input:focus-visible, 
+.contact__form textarea:focus-visible {outline: 1px solid #929292;}
 .contact__form textarea{
   flex-basis: 100%;
   height: 100px;
@@ -291,213 +283,100 @@ body{
   color: white;
   background-color: var(--submit);
 }
-.contact__subtitle{
-  font-size: 1.3rem;
-}
-.contact__form p{
-  margin-top: -10px;
-}
+.contact__subtitle {font-size: 1.3rem;}
+.contact__form p {margin-top: -10px;}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+/*::::::::: estilos para el footer ::::::::::*/
+
 footer{
   width: 100%;
   background: rgb(63,94,251);
   background: linear-gradient(to right, var(--footer1), var(--footer2));
 }
-.container--footer{
-  height: 80px;
-}
+.container--footer {height: 80px;}
 .menu--footer{
   gap: 0;
   color: white;
   font-size: 1.3rem;
   flex-wrap: wrap;
 }
-.underline{
-  text-decoration: underline dotted;
-}
-.item-display{
-  display: block;
-}
+.underline {text-decoration: underline dotted;}
+.item-display {display: block;}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
-.burguer{
-  display: none;
-}
-svg{
-  width: 30px;
-  cursor: pointer;
-}
 
-svg path{
-  stroke-width: 30;
-  stroke-linecap: round;
-  stroke: #fff;
-  fill: none;
-  transition: all .5s ease-in-out;
-}
-
-/* In menu form */
-
-.top_bar,
-.bottom_bar{
-  stroke-dasharray: 240px 910px;
-}
-
-.middle_bar{
-  stroke-dasharray: 240px 240px;
-}
-
-/* In cross form */
-
-.open .top_bar,
-.open .bottom_bar{
-  stroke-dashoffset: -650px;
-}
-
-.open .middle_bar{
-  stroke-dasharray: 0px 220px;
-  stroke-dashoffset: -120px;
-}
-
+/*::::::::: Media Queries ::::::::::*/
 
 @media screen and (max-width:1200px) {
-  .container{
-    width: 992px;
-  }
-  .brand{
-    gap: 10px;
-  }
-  .brand__logo img{
-    width: 75px;
-  }
-  .brand__name{
-    font-size: 1.8rem
-  }
-  .menu{
-    font-size: 1.4rem;
-  }
-  .card{
-    flex-basis: 250px;
-  }
+  .container {width: 992px;}
+  .navBar__brand {gap: 10px;}
+  .brand__logo img {width: 75px;}
+  .brand__name {font-size: 1.8rem}
+  .menu {font-size: 1.4rem;}
+  .card {flex-basis: 250px;}
 }
-
 @media screen and (max-width:992px){
-  .container{
-    width: 100%;
-  }
-  /* .menu{
-    display: none;
-  } */
-  .burguer{
-    display: block;
-  }
-  .header nav{
+  .container {width: 100%;}
+  .burguer {display: block;}
+  .navBar .menu{
     background-color: var(--greyColor);
+    text-transform: uppercase;
     position: absolute;
     top: 80px;
-    right: 0;
+    right: -300px;
+    opacity: 0;
     width: 300px;
     height: calc(100vh - 80px);
-    z-index: 2;
-  }
-  .header .menu{
     flex-direction: column;
+    z-index: 2;
+    transition: right .4s ease-in, opacity .4s ease-in;
   }
-  .hero__text{
-    width: 60%;
+  .navBar .menu li {width: 90%;}
+  .navBar .menu a {display: block;} 
+  .menu--visible{
+    right: 0!important;
+    opacity: 1!important;
   }
-  .card{
-    flex-basis: 30%;
-    max-width: 250px;
-  }
-  .lugarFecha{
-    height: 350px;
-  }
-  .menu--footer{
-    display: flex;
-  }
+  .hero__text {width: 60%;}
+  .card {flex-basis: 30%; max-width: 250px;}
+  .lugarFecha {height: 350px;}
+  .menu--footer {display: flex;}
 }
-
 @media screen and (max-width:768px) {
-  .hero__text{
-    width: 70%;
-    line-height: 1.3;
-  }
+  .hero__text {width: 70%; line-height: 1.3;}
   .card{
     max-width: 222px;
     min-width: 195px;
     flex-grow: 1;
   }
-  .card__content{
-    padding: 15px;
-  }
-  
-  .lugarFecha{
-    height: auto;
-  }
-  .lugarFecha__image{
-    flex-basis: 45%;
-  }
-  .lugarFecha__content{
-    flex-basis: 55%;
-  }
-  .container--footer{
-    height: auto;
-  }
-  .menu--footer{
-    
-    gap: 10px 20px;
-    font-size: 1.2rem;
-  }
-  .item-display{
-    display: inline;
-  }
+  .card__content {padding: 15px;}
+  .lugarFecha {height: auto;}
+  .lugarFecha__image {flex-basis: 45%;}
+  .lugarFecha__content {flex-basis: 55%;}
+  .container--footer {height: auto;}
+  .menu--footer {gap: 10px 20px; font-size: 1.2rem;}
+  .item-display {display: inline;}
 }
-
 @media screen and (max-width:576px) {
-  .header nav{
-    width: 100%;
-  }
-  .hero{
-    align-items: center;
-  }
-  .hero__text{
-    text-align: left;
-    width: 90%;
-  }
+  .navBar .menu {width: 100%; right: -100%;}
+  .hero .container {align-items: center;}
+  .hero__text {text-align: left; width: 90%;}
   .hero__buttons{
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
   }
-  .hero__buttons .button{
-    width: 80%;
-    text-align: center;
-  }
-  .card{
-    max-width: 90%;
-    flex-basis: 90%;
-  }
-  .lugarFecha{
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .lugarFecha__image{
-    /* background: linear-gradient(to top, var(--greyColor) 0%, transparent 50%), url(../assets/img/honolulu.jpg);
-    background-size: cover;
-    background-position: center; */
-    flex-basis: 100%;
-    height: 60vw;
-  }
-  .lugarFecha__content{
-    flex-basis: 100%;
-  }
-
-
-  .contact__form{
-    gap: 10px;
-  }
-  .contact__form input{
-    width: calc(50% - 5px);
-  }
+  .hero__buttons .button {width: 80%; text-align: center;}
+  .card {max-width: 90%; flex-basis: 90%;}
+  .lugarFecha {flex-wrap: wrap; height: auto;}
+  .lugarFecha__image {flex-basis: 100%; height: 60vw;}
+  .lugarFecha__content {flex-basis: 100%;}
+  .contact__form {gap: 10px;}
+  .contact__form input {width: calc(50% - 5px);}
 }
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/

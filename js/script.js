@@ -9,11 +9,13 @@ document.addEventListener("click", (e) => {
     menuButton.classList.remove("open");
     menu.classList.remove("menu--visible");
     nav.classList.remove("navBar--fixed");
+    document.body.classList.remove("navbarPlaceholder");
   }
   if (e.target.matches('.burguer') || e.target.matches('.burguer *')) {
     menuButton.classList.toggle("open");
     menu.classList.toggle("menu--visible");
     nav.classList.toggle("navBar--fixed");
+    document.body.classList.toggle("navbarPlaceholder");
   }
 })
 

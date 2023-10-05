@@ -5,7 +5,7 @@ Este proyecto consiste en lograr maquetar una web en base a un layout provisto m
 ## Consignas
 
 - Usar Etiquetas semánticas adecuadamente.
-- Implementar el uso de la etiqueta <aside> en un anuncio
+- Implementar el uso de la etiqueta `<aside>` en un anuncio
 - Diseño responsivo
 - Desktop first
 

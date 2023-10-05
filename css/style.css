@@ -39,6 +39,7 @@ body{
   background-color: var(--greyColor);
   position: sticky;
   top: calc(var(--navBarHeight) * -1);
+  z-index: 99;
   transition: top .3s ease-in-out;
 }
 .navBar--sticky {top: 0;}
@@ -59,7 +60,7 @@ body{
 .brand__name{
   color: white;
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 400;
 }
 .menu{
   height: 100%;
@@ -122,7 +123,7 @@ body{
   color: white;
   font-size: 1.6rem;
 }
-.hero__title {font-size: 2.8rem;}
+.hero__title {font-size: 3.2rem; font-weight: 600;}
 .hero__text {width: 50%; line-height: 1.6;}
 .hero__buttons {display: flex; gap: 20px;}
 .button{
@@ -135,7 +136,7 @@ body{
 .button--green {border: none; background-color: var(--comprarTickets);}
 .button--green:hover {background-color: #009721;}
 .button--small{
-  padding: 5px;
+  padding: 5px 7px;
   line-height: initial;
   border-radius: 3px;
 }
@@ -183,7 +184,7 @@ body{
 }
 .tags {display: flex; gap:5px;}
 .card__tag{
-  padding: 5px;
+  padding: 2px 6px;
   border-radius: 5px;
   color: white;
   background-color: var(--negocios);
@@ -194,7 +195,7 @@ body{
 .card__tag--startup {background-color: var(--startup);}
 .card__name{
   margin-bottom: 10px;
-  font-weight: lighter;
+  font-weight: 600;
   font-size: 1.8rem;
 }
 .card__text{
@@ -230,8 +231,8 @@ body{
   font-size: 1.1rem;
   
 }
-.lugarFecha__content h2 {font-size: 2rem;}
-.lugarFecha__content p {font-size: 1.1rem; line-height: 1.8;}
+.lugarFecha__content h2 {font-size: 2.4rem; font-weight: 600;}
+.lugarFecha__content p {font-size: 1.2rem; line-height: 1.8;}
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
@@ -278,7 +279,10 @@ body{
   color: white;
   font-size: 1.8rem;
   background-color: var(--submit);
+  transition: background .3s;
+  cursor: pointer;
 }
+.contact__form input:last-child:hover {background-color: #719c27;}
 .contact__subtitle {font-size: 1.3rem;}
 .contact__form p {margin-top: -10px;}
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -296,6 +300,7 @@ footer{
   gap: 0;
   color: white;
   font-size: 1.3rem;
+  font-weight: 600;
   flex-wrap: wrap;
 }
 .underline {text-decoration: underline dotted;}
@@ -403,6 +408,6 @@ footer{
   .lugarFecha__image {flex-basis: 100%; height: 60vw;}
   .lugarFecha__content {flex-basis: 100%;}
   .contact__form {gap: 10px;}
-  .contact__form input {width: calc(50% - 5px);}
+  .contact__form input {width: 100%;}
 }
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/

@@ -40,10 +40,10 @@ body{
   position: sticky;
   top: calc(var(--navBarHeight) * -1);
   z-index: 99;
-  transition: top .3s ease-in-out;
+  transition: top .3s ease-in-out,box-shadow .5s ease-out;
 }
-.navBar--sticky {top: 0;}
-.navBar--fixed {position: fixed; top: 0;}
+.navBar--sticky {top: 0; box-shadow: 0px -10px 10px 10px #00000050}
+.navBar--fixed {position: fixed; top: 0; box-shadow: 0px -10px 10px 10px #00000050;}
 .navBar .container{
   height: var(--navBarHeight);
   display: flex;
@@ -229,7 +229,7 @@ body{
   align-items: flex-start;
   gap: 15px;
   font-size: 1.1rem;
-  
+  border-left: 1px solid white;
 }
 .lugarFecha__content h2 {font-size: 2.4rem; font-weight: 600;}
 .lugarFecha__content p {font-size: 1.2rem; line-height: 1.8;}
@@ -357,7 +357,7 @@ footer{
     width: 0;
     height: calc(100vh - var(--navBarHeight));
     flex-direction: column;
-    transition: opacity .4s ease-in, width .4s ease-out;
+    transition: opacity .4s ease-in, width .4s ease-out, box-shadow .5s ease-out;
     overflow: hidden;
     pointer-events: none;
   }
@@ -367,6 +367,7 @@ footer{
     width: 300px;
     opacity: 1;
     pointer-events: visible;
+    box-shadow: 10px 18px 10px 10px #00000050;
   }
   .hero__text {width: 60%;}
   .card {flex-basis: 30%; max-width: 250px;}
@@ -393,7 +394,7 @@ footer{
 
 @media screen and (max-width:576px) {
   .hero {height: calc(100vh - var(--navBarHeight));}
-  .menu--visible {width: 100%;}
+  .menu--visible {width: 100%; box-shadow: none;}
   .hero .container {align-items: center;}
   .hero__text {text-align: left; width: 90%;}
   .hero__buttons{
@@ -406,7 +407,7 @@ footer{
   .card {max-width: 90%; flex-basis: 90%;}
   .lugarFecha {flex-wrap: wrap; height: auto;}
   .lugarFecha__image {flex-basis: 100%; height: 60vw;}
-  .lugarFecha__content {flex-basis: 100%;}
+  .lugarFecha__content {flex-basis: 100%; border-left: none;}
   .contact__form {gap: 10px;}
   .contact__form input {width: 100%;}
 }

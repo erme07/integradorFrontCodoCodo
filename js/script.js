@@ -25,8 +25,5 @@ document.addEventListener('scroll', () => {
   } else {
     nav.classList.remove('navBar--sticky');
   }
-  if (scrollY === 0) {
-    nav.classList.remove('navBar--sticky');
-  }
   posicionY = scrollY;
 })

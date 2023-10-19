@@ -13,6 +13,7 @@
   --negocios:#6c757c;
   --submit:#96c93e;
   --comprarTickets:#28a744;
+  --totalIndicator:#c8e1fa;
   --navBarHeight:80px
 }
 
@@ -151,13 +152,13 @@ body{
   gap: 20px;
   margin-bottom: 30px;
 }
-.oradores__title, .contact__title{
+.oradores__title, .contact__title, .ticket__title{
   text-align: center;
   text-transform: uppercase;
   font-size: 2.6rem;
   color: #202529;
 }
-.oradores__title--small, .contact__title--small{
+.oradores__title--small, .contact__title--small, .ticket__title--small{
   font-size: 1.2rem;
   font-weight: lighter;
   display: block;
@@ -299,6 +300,60 @@ body{
 .contact__form p {margin-top: -10px;}
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
+
+/*::::::::: estilos para seccion de "tickets" ::::::::::*/
+.ticket__category{
+  display: flex;
+  gap: 10px;
+}
+.category{
+  flex-basis: auto;
+  flex-grow: 1;
+  aspect-ratio: 5/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.category--student{
+  border-color: #047dff;
+}
+.category--trainee{
+  border-color: #5fb8c6;
+}
+.category--junior{
+  border-color: #f2ca55;
+}
+.ticket__total{
+  background-color: var(--totalIndicator);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 40px;
+  color: #1f6db2;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.ticket__buttons{
+  display: flex;
+  gap: 10px;
+}
+
+.ticket__button{
+  background-color: var(--submit);
+  height: 35px;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  color: white;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 /*::::::::: estilos para el footer ::::::::::*/
 

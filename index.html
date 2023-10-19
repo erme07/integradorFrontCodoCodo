@@ -23,7 +23,7 @@
         <li><a href="#oradores" class="menu__item">Los oradores</a></li>
         <li><a href="#lugarFecha" class="menu__item">El lugar y la fecha</a></li>
         <li><a href="#convierteteOrador" class="menu__item">Conviertete en orador</a></li>
-        <li><a href="" class="menu__item menu__item--green">Comprar tickets</a></li>
+        <li><a href="#tickets" class="menu__item menu__item--green">Comprar tickets</a></li>
       </ul>
       <svg viewBox="250 200 350 250" class="burguer">
         <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
@@ -39,7 +39,7 @@
       <p class="hero__text">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimientos y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
       <div class="hero__buttons">
         <a href="#convierteteOrador" class="button">Quiero ser orador</a>
-        <a href="#" class="button button--green">Comprar tickets</a>
+        <a href="#tickets" class="button button--green">Comprar tickets</a>
       </div>
     </div>
   </header>
@@ -121,6 +121,56 @@
       <a href="https://github.com/erme07/integradorFrontCodoCodo" target="_blank"><img src="./assets/img/banner.jpg"
           alt=""></a>
     </aside>
+
+    <section class="container" id="tickets">
+      <div class="contact ticket">
+        <div class="ticket__category">
+          <div class="category category--student">
+            <p>Estudiante</p>
+            <p>Tienen un descuento</p>
+            <p>80%</p>
+            <p>*presentar documentacion</p>
+          </div>
+          <div class="category category--trainee">
+            <p>Estudiante</p>
+            <p>Tienen un descuento</p>
+            <p>80%</p>
+            <p>*presentar documentacion</p>
+          </div>
+          <div class="category category--junior">
+            <p>Estudiante</p>
+            <p>Tienen un descuento</p>
+            <p>80%</p>
+            <p>*presentar documentacion</p>
+          </div>
+        </div>
+        
+        
+        <h2 class="ticket__title"><span class="ticket__title--small">Venta</span> Valor de ticket $200</h2>
+        <div class="ticket__form">
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="Apellido">
+          <input type="email" placeholder="Correo">
+          <label for="cantidad">Cantidad</label>
+          <input type="text" name="" id="cantidad" placeholder="Cantidad">
+          <label for="categoria">Categoria</label>
+          <select name="" id="categoria">
+            <option value="estudiante">Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+          </select>
+        </div>
+        <div class="ticket__total">
+          <p>Total a Pagar: <span id="total">$</span></p>
+        </div>
+        <div class="ticket__buttons">
+          <button class="ticket__button">Borrar</button>
+          <button class="ticket__button">Resumen</button>
+        </div>
+        
+      </div>
+    </section>
+
   </main>
   
   <footer>

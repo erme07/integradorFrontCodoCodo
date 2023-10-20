@@ -319,6 +319,8 @@ body{
   color: black;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
+  transition: background .3s;
 }
 .hard{
   font-size: 17px;
@@ -329,8 +331,14 @@ body{
   color: grey;
 }
 .category--student {border-color: #047dff;}
-.category--trainee {border-color: #5fb8c6;}
+.category--student:hover {background-color: #047dff50;}
+.category--student.selected {background-color: #047dff50;}
+.category--trainee {border-color: #55c7aa;}
+.category--trainee:hover {background-color: #55c7aa50;}
+.category--trainee.selected {background-color: #55c7aa50;}
 .category--junior{border-color: #f2ca55;}
+.category--junior:hover{background-color: #f2ca5550;}
+.category--junior.selected{background-color: #f2ca5550;}
 
 .ticket__form{
   display: flex;
@@ -342,19 +350,19 @@ body{
   height: 30px;
   padding: 0 10px;
   border: 1px solid #dcdcdc;
+  border-radius: 3px;
 }
+.ticket__form input:focus-visible, 
+.ticket__form select:focus-visible {outline: 1px solid #929292;}
+.invalid {outline: 1px solid red!important;}
+
 .ticket__form label{
   font-size: 13px;
   font-weight: 600;
   margin-bottom: -5px;
 }
-.full{
-  flex-basis: 100%;
-}
-.half{
-  flex-basis: calc(50% - 10px);
-  flex-grow: 1;
-}
+.full {flex-basis: 100%;}
+.half {flex-basis: calc(50% - 10px); flex-grow: 1;}
 
 
 .ticket__total{
@@ -369,12 +377,9 @@ body{
   margin-bottom: 15px;
   border-radius: 5px;
 }
-.ticket__buttons{
-  display: flex;
-  gap: 10px;
-}
+.ticket__buttons {display: flex; gap: 10px;}
 
-.ticket__button{
+.ticket__buttons button{
   background-color: var(--submit);
   height: 35px;
   border: 1px solid #dcdcdc;
@@ -382,7 +387,10 @@ body{
   color: white;
   flex-basis: auto;
   flex-grow: 1;
+  cursor: pointer;
+  transition: background .3s;
 }
+.ticket__buttons button:hover {background-color: #719c27;}
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 

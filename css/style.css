@@ -302,10 +302,7 @@ body{
 
 
 /*::::::::: estilos para seccion de "tickets" ::::::::::*/
-.ticket__category{
-  display: flex;
-  gap: 10px;
-}
+.ticket__category {display: flex; gap: 10px;}
 .category{
   flex-basis: auto;
   flex-grow: 1;
@@ -317,19 +314,15 @@ body{
   border: 2px solid black;
   border-radius: 3px;
   color: black;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
+  padding: 5px;
+  text-align: center;
   transition: background .3s;
 }
-.hard{
-  font-size: 17px;
-  font-weight: bold;
-}
-.soft{
-  font-size: 12px;
-  color: grey;
-}
+.hard {font-size: 1.7rem; font-weight: bold;}
+.soft {font-size: 1.2rem; color: grey;}
 .category--student {border-color: #047dff;}
 .category--student:hover {background-color: #047dff50;}
 .category--student.selected {background-color: #047dff50;}
@@ -339,7 +332,6 @@ body{
 .category--junior{border-color: #f2ca55;}
 .category--junior:hover{background-color: #f2ca5550;}
 .category--junior.selected{background-color: #f2ca5550;}
-
 .ticket__form{
   display: flex;
   flex-wrap: wrap;
@@ -355,16 +347,13 @@ body{
 .ticket__form input:focus-visible, 
 .ticket__form select:focus-visible {outline: 1px solid #929292;}
 .invalid {outline: 1px solid red!important;}
-
 .ticket__form label{
   font-size: 13px;
   font-weight: 600;
   margin-bottom: -5px;
 }
 .full {flex-basis: 100%;}
-.half {flex-basis: calc(50% - 10px); flex-grow: 1;}
-
-
+.half {width: calc(50% - 10px); flex-grow: 1;}
 .ticket__total{
   background-color: var(--totalIndicator);
   display: flex;
@@ -372,18 +361,19 @@ body{
   padding-left: 20px;
   height: 40px;
   color: #1f6db2;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 15px;
   border-radius: 5px;
 }
 .ticket__buttons {display: flex; gap: 10px;}
-
 .ticket__buttons button{
   background-color: var(--submit);
   height: 35px;
   border: 1px solid #dcdcdc;
   border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
   color: white;
   flex-basis: auto;
   flex-grow: 1;
@@ -391,8 +381,8 @@ body{
   transition: background .3s;
 }
 .ticket__buttons button:hover {background-color: #719c27;}
-
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
 
 /*::::::::: estilos para el footer ::::::::::*/
 
@@ -517,5 +507,16 @@ footer{
   .lugarFecha__content {flex-basis: 100%; border-left: none;}
   .contact__form {gap: 10px;}
   .contact__form input {width: 100%;}
+  .ticket__title {line-height: 1.1; margin-bottom: 10px;}
+  .ticket__title--small{line-height: 1.5;}
+  .ticket__category {gap: 5px;}
+  .category{
+    font-size: 1.2rem;
+    line-height: 1;
+    gap: 5px;
+  }
+  .hard {font-size: 1.4rem;}
+  .soft {font-size: 1rem;}
+  .ticket__form input:first-child, .ticket__form input:nth-child(2) {width: 100%;}
 }
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar Tickets</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/tickets.js" defer></script>
+</head>
+<body>
+  <nav class="navBar navBar--sticky" id="navBar">
+    <div class="container">
+      <div class="navBar__brand">
+        <a href="./index.html" class="brand__logo"><img src="./assets/img/codoacodo.png" alt="Logo de Codo a Codo"></a>
+        <h2 class="brand__name">Conf Bs As</h2>
+      </div>
+      <ul class="menu menu--navbar" id="menu">
+        <li><a href="./index.html" class="menu__item menu__item--active">La conferencia</a></li>
+        <li><a href="./index.html#oradores" class="menu__item">Los oradores</a></li>
+        <li><a href="./index.html#lugarFecha" class="menu__item">El lugar y la fecha</a></li>
+        <li><a href="./index.html#convierteteOrador" class="menu__item">Conviertete en orador</a></li>
+        <li><a href="./tickets.html" class="menu__item menu__item--green">Comprar tickets</a></li>
+      </ul>
+      <svg viewBox="250 200 350 250" class="burguer">
+        <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
+        <path d="M300,320 L540,320" class="middle_bar" />
+        <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom_bar"
+          transform="translate(480, 320) scale(1, -1) translate(-480, -318)" />
+      </svg>
+    </div>
+  </nav>
+  <main class="container">
+      <div class="contact ticket">
+        <div class="ticket__category">
+          <div class="category category--student selected">
+            <p class="hard">Estudiante</p>
+            <p>Tienen un descuento</p>
+            <p class="hard">80%</p>
+            <p class="soft">* presentar documentacion</p>
+          </div>
+          <div class="category category--trainee">
+            <p class="hard">Trainee</p>
+            <p>Tienen un descuento</p>
+            <p class="hard">50%</p>
+            <p class="soft">* presentar documentacion</p>
+          </div>
+          <div class="category category--junior">
+            <p class="hard">Junior</p>
+            <p>Tienen un descuento</p>
+            <p class="hard">15%</p>
+            <p class="soft">* presentar documentacion</p>
+          </div>
+        </div>
+    
+    
+        <h2 class="ticket__title"><span class="ticket__title--small">Venta</span> Valor de ticket $200</h2>
+        <form class="ticket__form" id="ticketForm">
+          <input type="text" placeholder="Nombre" class="half">
+          <input type="text" placeholder="Apellido" class="half">
+          <input type="email" placeholder="Correo" class="full">
+          <label for="cantidad" class="half">Cantidad</label>
+          <label for="categoria" class="half">Categoria</label>
+          <input type="text" name="" id="cantidad" placeholder="Cantidad" class="half">
+          <select name="" id="selectCategory" class="half">
+            <option value="estudiante">Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+          </select>
+        </form>
+        <div class="ticket__total">
+          <p>Total a Pagar: <span id="total">$0</span></p>
+        </div>
+        <div class="ticket__buttons">
+          <button id="clear">Borrar</button>
+          <button id="resume">Resumen</button>
+        </div>
+    
+      </div>
+  </main>
+  <footer>
+    <nav class="container container--footer">
+      <ul class="menu menu--footer">
+        <li><a href=""><span class="item-display">Preguntas</span> frecuentes</a></li>
+        <li><a href="">Contáctanos</a></li>
+        <li><a href="">Prensa</a></li>
+        <li><a href="">Conferencias</a></li>
+        <li><a href=""><span class="item-display">Términos y</span> condiciones</a></li>
+        <li><a href="">Privacidad</a></li>
+        <li><a href="">Estudiantes</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

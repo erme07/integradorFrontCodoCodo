@@ -302,6 +302,7 @@ body{
 
 
 /*::::::::: estilos para seccion de "tickets" ::::::::::*/
+.ticket{margin-top: 15px; margin-bottom: 5px;}
 .ticket__category {display: flex; gap: 10px;}
 .category{
   flex-basis: auto;

@@ -15,15 +15,15 @@
   <nav class="navBar navBar--sticky" id="navBar">
     <div class="container">
       <div class="navBar__brand">
-        <a href="" class="brand__logo"><img src="./assets/img/codoacodo.png" alt="Logo de Codo a Codo"></a>
+        <a href="./index.html" class="brand__logo"><img src="./assets/img/codoacodo.png" alt="Logo de Codo a Codo"></a>
         <h2 class="brand__name">Conf Bs As</h2>
       </div>
       <ul class="menu menu--navbar" id="menu">
-        <li><a href="#" class="menu__item menu__item--active">La conferencia</a></li>
+        <li><a href="./index.html" class="menu__item menu__item--active">La conferencia</a></li>
         <li><a href="#oradores" class="menu__item">Los oradores</a></li>
         <li><a href="#lugarFecha" class="menu__item">El lugar y la fecha</a></li>
         <li><a href="#convierteteOrador" class="menu__item">Conviertete en orador</a></li>
-        <li><a href="#tickets" class="menu__item menu__item--green">Comprar tickets</a></li>
+        <li><a href="./tickets.html" class="menu__item menu__item--green">Comprar tickets</a></li>
       </ul>
       <svg viewBox="250 200 350 250" class="burguer">
         <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
@@ -122,54 +122,7 @@
           alt=""></a>
     </aside>
 
-    <section class="container" id="tickets">
-      <div class="contact ticket">
-        <div class="ticket__category">
-          <div class="category category--student selected">
-            <p class="hard">Estudiante</p>
-            <p>Tienen un descuento</p>
-            <p class="hard">80%</p>
-            <p class="soft">* presentar documentacion</p>
-          </div>
-          <div class="category category--trainee">
-            <p class="hard">Trainee</p>
-            <p>Tienen un descuento</p>
-            <p class="hard">50%</p>
-            <p class="soft">* presentar documentacion</p>
-          </div>
-          <div class="category category--junior">
-            <p class="hard">Junior</p>
-            <p>Tienen un descuento</p>
-            <p class="hard">15%</p>
-            <p class="soft">* presentar documentacion</p>
-          </div>
-        </div>
-        
-        
-        <h2 class="ticket__title"><span class="ticket__title--small">Venta</span> Valor de ticket $200</h2>
-        <form class="ticket__form" id="ticketForm">
-          <input type="text" placeholder="Nombre" class="half">
-          <input type="text" placeholder="Apellido" class="half">
-          <input type="email" placeholder="Correo" class="full">
-          <label for="cantidad" class="half">Cantidad</label>
-          <label for="categoria" class="half">Categoria</label>
-          <input type="text" name="" id="cantidad" placeholder="Cantidad" class="half">
-          <select name="" id="selectCategory" class="half">
-            <option value="estudiante">Estudiante</option>
-            <option value="trainee">Trainee</option>
-            <option value="junior">Junior</option>
-          </select>
-        </form>
-        <div class="ticket__total">
-          <p>Total a Pagar:  <span id="total">$0</span></p>
-        </div>
-        <div class="ticket__buttons">
-          <button id="clear">Borrar</button>
-          <button id="resume">Resumen</button>
-        </div>
-        
-      </div>
-    </section>
+    
 
   </main>
   

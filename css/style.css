@@ -75,9 +75,14 @@ body{
 .menu__item{
   color: #9e9e9e;
   padding: 10px;
-  transition: background .3s;
+  border-radius: 8px;
+  transition: background .3s, color .3s;
 }
 .menu__item:hover {background-color: #2b2e33;}
+.menu--navbar li:last-child a:hover{
+  background-color: var(--comprarTickets);
+  color: white;
+}
 .menu__item--active {color: white;}
 .menu__item--green {color: var(--comprarTickets);}
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -249,7 +254,7 @@ body{
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
-/*::::::::: estilos para seccion de "contacto" ::::::::::*/
+/*::::::::: estilos para secciones de formulario ::::::::::*/
 
 .contact{
   max-width: 700px;
@@ -261,43 +266,95 @@ body{
 }
 .contact__title {text-align: center;}
 .contact__subtitle {text-align: center;}
-.contact__form{
+
+.full {flex-basis: 100%;}
+.half {width: calc(50% - 10px); flex-grow: 1;}
+.half >*, .full >* {width: 100%;}
+
+.form{
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 30px;
+  gap: 15px 10px;
   color: #858585;
 }
-.contact__form input{
-  height: 30px;
-  width: calc(50% - 15px);
-  border-radius: 3px;
-  border: 1px solid #dcdcdc;
-  padding: 0 10px;
-  font-family: 'Open Sans', sans-serif;
+.form label{
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-left: 5px;
+  color: black;
 }
-.contact__form input:focus-visible, 
-.contact__form textarea:focus-visible {outline: 1px solid #929292;}
-.contact__form textarea{
-  flex-basis: 100%;
-  height: 100px;
+.form input, .form select{
+  height: 30px;
+  padding: 0 10px;
   border: 1px solid #dcdcdc;
-  font-size: 1.8rem;
+  border-radius: 3px;
+}
+.form textarea{
+  flex-basis: 100%;
+  min-height: 100px;
+  max-height: 250px;
+  border: 1px solid #dcdcdc;
+  font-size: 1.5rem;
   padding: 10px 15px;
   border-radius: 3px;
   font-family: 'Open Sans', sans-serif;
 }
-.contact__form input:last-child{
+.form button{
   flex-basis: 100%;
   height: 40px;
   color: white;
   font-size: 1.8rem;
   background-color: var(--submit);
   transition: background .3s;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
   cursor: pointer;
 }
-.contact__form input:last-child:hover {background-color: #719c27;}
+.form button:hover {background-color: #719c27;}
 .contact__subtitle {font-size: 1.3rem;}
-.contact__form p {margin-top: -10px;}
+.form p {margin-top: -10px;}
+
+input:focus, select:focus, 
+textarea:focus {
+  border:1px solid #86b7fe;
+  box-shadow: 0 0 0 0.4rem rgba(13,110,253,.25);
+  outline: 0;
+}
+input.invalid, 
+textarea.invalid {
+  border:1px solid #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url(../assets/icons/error.svg);
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 18px 18px;
+}
+input.invalid:focus, 
+textarea.invalid:focus {box-shadow: 0 0 0 0.4rem rgba(220,53,69, .25); outline: 0;}
+
+input.valid, textarea.valid{
+  border: 1px solid #198754;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url(../assets/icons/succes.svg);
+  background-repeat: no-repeat;
+  background-position: right 7px center;
+  background-size: 13px 13px;
+}
+input.valid:focus,
+textarea.valid:focus {box-shadow: 0 0 0 0.4rem rgba(25,135,84,.25); outline: 0;}
+
+.error{
+  display: none;
+  color: red;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+.error--show {display: block;}
+
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 
@@ -423,18 +480,7 @@ footer{
   .lugarFecha {flex-wrap: wrap; height: auto;}
   .lugarFecha__image {flex-basis: 100%; height: 60vw;}
   .lugarFecha__content {flex-basis: 100%; border-left: none;}
-  .contact__form {gap: 10px;}
-  .contact__form input {width: 100%;}
-  .ticket__title {line-height: 1.1; margin-bottom: 10px;}
-  .ticket__title--small{line-height: 1.5;}
-  .ticket__category {gap: 5px;}
-  .category{
-    font-size: 1.2rem;
-    line-height: 1;
-    gap: 5px;
-  }
-  .hard {font-size: 1.4rem;}
-  .soft {font-size: 1rem;}
-  .ticket__form input:first-child, .ticket__form input:nth-child(2) {width: 100%;}
+  .form {gap: 10px;}
+  .form .half:first-child, .form .half:nth-child(2) {width: 100%;}
 }
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/

@@ -75,4 +75,8 @@ document.addEventListener("reset", () => {
     item.classList.remove("invalid")
     item.classList.remove("valid")
   })
+  if (window.location.pathname === "/integradorFrontCodoCodo/tickets.html") {
+    selectCat.value = "senior"
+    selectCategory()
+  }
 })

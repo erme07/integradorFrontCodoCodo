@@ -57,7 +57,16 @@ formulario.addEventListener('submit', (e) => {
   validarFormulario()
 })
 
-document.addEventListener('input', e => validacion(e.target))
+document.addEventListener('input', e => {
+  if(e.target.getAttribute("type")==="submit")
+    validacion(e.target)
+  if (e.target.id === "selectCategory") {
+    selectCat.value = e.target.value
+    selectCategory()
+  }
+  if (e.target.matches("input") || e.target.matches("textarea"))
+    validacion(e.target)
+})
 
 document.addEventListener("reset", () => {
   campos.forEach((item) => {

@@ -1,12 +1,12 @@
 .navBar {position: static;}
 .navBar--fixed {position: fixed;}
 .menu--navbar li:last-child a {background-color: #28a744; color: white;}
-.ticket{margin-top: 15px; margin-bottom: 5px;}
+.ticket{margin-top: 15px; margin-bottom: 5px; gap: 30px;}
 .ticket__category {display: flex; gap: 5px; flex-wrap: wrap;}
 .category{
   flex-basis: calc(25% - 15px);
   flex-grow: 1;
-  aspect-ratio: 4/3;
+  aspect-ratio: 5/4;
   display: flex;
   flex-direction: column;
   align-items: center;

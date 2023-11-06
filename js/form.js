@@ -43,7 +43,7 @@ const validarFormulario = () => {
   let esValido = Object.values(registroValidaciones).every(element => element === true);
   if (esValido) {
     console.log("Se puede enviar al servidor")
-    if (window.location.pathname === "/tickets.html")
+    if (window.location.pathname === "/integradorFrontCodoCodo/tickets.html")
       showPrice() // esta funcion solo se ejecuta si el formulario es el de la pagina "tickets"
   }
   else

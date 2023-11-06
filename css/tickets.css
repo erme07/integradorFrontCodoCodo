@@ -1,8 +1,6 @@
 .navBar {position: static;}
-.navBar--fixed{
-    position: fixed;
-}
-
+.navBar--fixed {position: fixed;}
+.menu--navbar li:last-child a {background-color: #28a744; color: white;}
 .ticket{margin-top: 15px; margin-bottom: 5px;}
 .ticket__category {display: flex; gap: 10px;}
 .category{
@@ -34,28 +32,9 @@
 .category--junior{border-color: #f2ca55;}
 .category--junior:hover{background-color: #f2ca5550;}
 .category--junior.selected{background-color: #f2ca5550;}
-.ticket__form{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px 10px;
-  margin-bottom: 20px;
-}
-.ticket__form input, .ticket__form select{
-  height: 30px;
-  padding: 0 10px;
-  border: 1px solid #dcdcdc;
-  border-radius: 3px;
-}
-.ticket__form input:focus-visible, 
-.ticket__form select:focus-visible {outline: 1px solid #929292;}
-.invalid {outline: 1px solid red!important;}
-.ticket__form label{
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: -5px;
-}
-.full {flex-basis: 100%;}
-.half {width: calc(50% - 10px); flex-grow: 1;}
+
+.form--ticket {margin-bottom: 20px;}
+.form--ticket p {margin-top: 0;}
 .ticket__total{
   background-color: var(--totalIndicator);
   display: flex;
@@ -68,18 +47,22 @@
   margin-bottom: 15px;
   border-radius: 5px;
 }
+.ticket__total span {font-size: 1.8rem;}
 .ticket__buttons {display: flex; gap: 10px;}
-.ticket__buttons button{
-  background-color: var(--submit);
-  height: 35px;
-  border: 1px solid #dcdcdc;
-  border-radius: 3px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
-  color: white;
-  flex-basis: auto;
-  flex-grow: 1;
-  cursor: pointer;
-  transition: background .3s;
+.ticket__buttons button {height: 35px;font-size: 1.5rem;}
+
+
+/* :::::::: Media queries ::::::::*/
+
+@media screen and (max-width:576px) {
+  .ticket__title {line-height: 1.1; margin-bottom: 10px;}
+  .ticket__title--small{line-height: 1.5;}
+  .ticket__category {gap: 5px;}
+  .category{
+    font-size: 1.2rem;
+    line-height: 1;
+    gap: 5px;
+  }
+  .hard {font-size: 1.4rem;}
+  .soft {font-size: 1rem;}
 }
-.ticket__buttons button:hover {background-color: #719c27;}

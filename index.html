@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Integrador Front | Erik Medina</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="./js/script.js" defer></script>
+  <script src="./js/form.js" defer></script>
 </head>
 <body>
   <nav class="navBar navBar--sticky" id="navBar">
     <div class="container">
       <div class="navBar__brand">
-        <a href="./index.html" class="brand__logo"><img src="./assets/img/codoacodo.png" alt="Logo de Codo a Codo"></a>
+        <a href="./index.html" class="brand__logo"><img src="./assets/icons/codoacodo.png" alt="Logo de Codo a Codo"></a>
         <h2 class="brand__name">Conf Bs As</h2>
       </div>
       <ul class="menu menu--navbar" id="menu">
@@ -48,7 +50,7 @@
     <section id="oradores" class="container oradores">
       <h2 class="oradores__title"><span class="oradores__title--small">Conoce a los </span>oradores</h2>
       <div class="oradores__content">
-        <div class="card">
+        <div data-aos="fade-right" data-aos-delay="50" class="card">
           <div class="card__image">
             <img src="./assets/img/steve.jpg" alt="Imagen de presentación de Steve Jobs" loading="lazy">
           </div>
@@ -61,7 +63,7 @@
             <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis animi eius quibusdam esse veniam, velit voluptate ipsum sint. Beatae excepturi aut quis incidunt nostrum!</p>
           </div>
         </div>
-        <div class="card">
+        <div data-aos="fade-up" data-aos-delay="50" class="card">
           <div class="card__image">
             <img src="./assets/img/bill.jpg" alt="Imagen de presentación de Steve Jobs" loading="lazy">
           </div>
@@ -74,7 +76,7 @@
             <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis animi eius quibusdam esse veniam, velit voluptate ipsum sint. Beatae excepturi aut quis incidunt nostrum!</p>
           </div>
         </div>
-        <div class="card">
+        <div data-aos="fade-left" data-aos-delay="50" class="card">
           <div class="card__image">
             <img src="./assets/img/ada.jpeg" alt="Imagen de presentación de Steve Jobs" loading="lazy">
           </div>
@@ -92,10 +94,10 @@
 
     <section id="lugarFecha" class="lugarFecha">
       <div class="lugarFecha__image"></div>
-      <div class="lugarFecha__content">
-        <h2>Bs As - Octubre</h2>
-        <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina. En los Estados Unidos, Honolulu es la mas sureña entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidad que cubre toda la ciudad (aproximadamente 600 km<span>2</span> de superficie).</p>
-        <a href="" class="button button--small">Conocé más</a>
+      <div  class="lugarFecha__content">
+        <h2 data-aos="fade-left" data-aos-delay="100">Bs As - Octubre</h2>
+        <p data-aos="fade-left" data-aos-delay="200">Buenos Aires es la provincia y localidad más grande del estado de Argentina. En los Estados Unidos, Honolulu es la mas sureña entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidad que cubre toda la ciudad (aproximadamente 600 km<span>2</span> de superficie).</p>
+        <a data-aos="fade-left" data-aos-delay="300" href="" class="button button--small">Conocé más</a>
       </div>
     </section>
 
@@ -103,12 +105,21 @@
       <div class="contact">
         <h2 class="contact__title"><span class="contact__title--small">conviertete en un </span>orador</h2>
         <p class="contact__subtitle">Anótate como orador para dar una <span class="underline">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
-        <form action="" class="contact__form">
-          <input type="text" placeholder="Nombre">
-          <input type="text" placeholder="Apellido">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Sobre qué quieres hablar?"></textarea>
+        <form action="" class="form">
+          <div class="half">
+            <input type="text" placeholder="Nombre" name="nombre">
+            <div class="error" data-field="nombre">Ingrese un nombre válido</div>
+          </div>
+          <div class="half">
+            <input type="text" placeholder="Apellido" name="apellido">
+            <div class="error" data-field="apellido">Ingrese un apellido válido</div>
+          </div>
+          <div class="full">
+            <textarea name="texto" id="" placeholder="Sobre qué quieres hablar?"></textarea>
+            <div class="error" data-field="texto">Ingrese un texto</div>
+          </div>
           <p>Recuerda incluir un título para tu charla</p>
-          <input type="submit" value="Enviar">
+          <button type="submit">Enviar</button>
         </form>
       </div>
     </section>
@@ -139,5 +150,9 @@
       </ul>
     </nav>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

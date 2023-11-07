@@ -58,7 +58,6 @@
 /* :::::::: Media queries ::::::::*/
 
 @media screen and (max-width:992px) and (orientation: portrait){
-  .menu--visible {width: 100%;}
   .ticket{gap: 50px;}
   .category{
     flex-wrap: wrap;

@@ -415,12 +415,6 @@ footer{
   .card {flex-basis: 250px;}
 }
 
-@media screen and (max-width:992px) and (orientation: portrait){
-  .hero {height: 500px;}
-}
-@media screen and (max-width:992px) and (orientation: landscape){
-  .hero{height: calc(100vh - var(--navBarHeight));}
-}
 @media screen and (max-width:992px){
   .container {width: 100%;}
   .burguer {display: block;}
@@ -451,6 +445,16 @@ footer{
   .card {flex-basis: 30%; max-width: 250px;}
   .lugarFecha {height: 350px;}
   .menu--footer {display: flex;}
+}
+@media screen and (max-width:992px) and (orientation: portrait){
+  .hero {height: 500px;}
+  .menu--visible {width: 50%;}
+  .menu__item{
+    padding: 30px 10px;
+  }
+}
+@media screen and (max-width:992px) and (orientation: landscape){
+  .hero{height: calc(100vh - var(--navBarHeight));}
 }
 
 @media screen and (max-width:768px) {

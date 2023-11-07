@@ -24,6 +24,10 @@ body{
   max-width: 1400px;
   margin: 0 auto;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 .navbarPlaceholder {padding-top: var(--navBarHeight);}
 .container{

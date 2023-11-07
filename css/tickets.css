@@ -58,12 +58,6 @@
 /* :::::::: Media queries ::::::::*/
 
 @media screen and (max-width:992px) and (orientation: portrait){
-  body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-  }
   .menu--visible {width: 100%;}
   .ticket{gap: 50px;}
   .category{

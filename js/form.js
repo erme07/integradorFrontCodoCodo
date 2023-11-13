@@ -38,14 +38,13 @@ const validacion = (campo) => {
     validarCampo(campo, regCant)
 }
 
-const validarFormulario = () => {
+const validarFormulario = (ticket=false) => {
   campos.forEach(campo => validacion(campo))
   let esValido = Object.values(registroValidaciones).every(element => element === true);
   if (esValido) {
     console.log("Se puede enviar al servidor")
-    if (window.location.pathname === "/integradorFrontCodoCodo/tickets.html"){
-      showPrice() // esta funcion solo se ejecuta si el formulario es el de la pagina "tickets"
-    }
+    if (ticket)
+      showPrice()
   }
   else
     console.log("Aun no se puede enviar al servidor")
@@ -54,7 +53,10 @@ const validarFormulario = () => {
 formulario.addEventListener('submit', (e) => {
   e.preventDefault()
   e.stopPropagation()
-  validarFormulario()
+  if(e.target.getAttribute("id")==="resume")
+    validarFormulario(true)
+  else
+    validarFormulario(false)
 })
 
 document.addEventListener('input', e => {

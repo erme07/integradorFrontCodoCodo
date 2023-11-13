@@ -28,8 +28,8 @@ const calculatePrice = () => {
   return total;
 }
 
-const showPrice = () => {
-    price.innerHTML = '$' + calculatePrice();
+const showPrice = (precio) => {
+    price.innerHTML = '$' + precio;
 }
 
 const removeSelected = () => {
@@ -67,5 +67,9 @@ document.addEventListener('click', (e) => {
   if (e.target.matches('.category--senior') || e.target.matches('.category--senior *')) {
     selectCat.value = 'senior'
     selectCategory()
+  }
+  if (e.target.id === "clear") {
+    resetear()
+    price.innerHTML = "$0"
   }
 })

@@ -1,20 +1,14 @@
 
-const regexNames = /^[A-Za-zñÑáéíóúÁÉÍÓÚ]{1,15}$/i;
-const regexMail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-const regCant = /^[1-9]\d*$/;
-const regText = /^.+[^ \t\r\n]+.*$/;
-
-// const regularExpresions = {
-//   texto: /^.+[^ \t\r\n]+.*$/,
-//   nombre: /^[A-Za-zñÑáéíóúÁÉÍÓÚ]{1,15}$/i,
-//   apellido: /^[A-Za-zñÑáéíóúÁÉÍÓÚ]{1,15}$/i,
-//   correo: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
-//   cantidad: /^[1-9]\d*$/
-// }
+const regularExpresions = {
+  texto: /^.+[^ \t\r\n]+.*$/,
+  nombre: /^[A-Za-zñÑáéíóúÁÉÍÓÚ]{1,15}$/i,
+  apellido: /^[A-Za-zñÑáéíóúÁÉÍÓÚ]{1,15}$/i,
+  correo: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+  cantidad: /^[1-9]\d*$/
+}
 
 const formulario = document.querySelector('form')
 const campos = Array.from(document.querySelectorAll("input, textarea"))
-
 const registroValidaciones = {};
 campos.forEach( item => registroValidaciones[item.getAttribute("name")] = false )
 
@@ -47,18 +41,7 @@ const validarCampo = (campo, regexp) => {
   }
 }
 
-const validacion = (campo) => {
-  if (campo.getAttribute("name") === "texto")
-    validarCampo(campo, regText)
-  else if (campo.getAttribute("name") === "nombre")
-    validarCampo(campo, regexNames)
-  else if (campo.getAttribute("name") === "apellido")
-    validarCampo(campo, regexNames)
-  else if (campo.getAttribute("name") === "correo")
-    validarCampo(campo, regexMail)
-  else if (campo.getAttribute("name") === "cantidad")
-    validarCampo(campo, regCant)
-}
+const validacion = (campo) => validarCampo(campo, regularExpresions[campo.getAttribute("name")])
 
 const validarFormulario = (ticket=false) => {
   campos.forEach(campo => validacion(campo))
@@ -70,15 +53,13 @@ const validarFormulario = (ticket=false) => {
       resetear(ticket)
       showPrice(precio)
     }
-    else
-      resetear(ticket)
+    else resetear(ticket)
   }
-  else
-    console.log("Aun no se puede enviar al servidor")
+  else console.log("Aun no se puede enviar al servidor")
 }
 
 const validarCalculo = () => {
-  if (regCant.test(amount.value)) {
+  if (regularExpresions.cantidad.test(amount.value)) {
     amount.classList.remove("invalid")
     amount.classList.add("valid")
     let precio = calculatePrice()
@@ -94,9 +75,8 @@ formulario.addEventListener('submit', (e) => {
   e.stopPropagation()
   if(e.submitter.id === "resume")
     validarFormulario(true)
-  else if (e.submitter.id === "calcular") {
+  else if (e.submitter.id === "calcular")
     validarCalculo()
-  }
   else
     validarFormulario(false)
 })

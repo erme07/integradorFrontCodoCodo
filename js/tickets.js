@@ -14,6 +14,7 @@ const descuentos = {
   junior: 15,
   senior: 0
 }
+Object.freeze(descuentos);
 
 const discountPercent = () => {
   if (Object.hasOwn(descuentos, selectCat.value))

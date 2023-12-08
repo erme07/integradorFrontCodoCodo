@@ -22,7 +22,7 @@ document.addEventListener("click", (e) => {
 document.addEventListener('scroll', () => {
   if (posicionY > scrollY) 
     nav.classList.add('navBar--sticky');
-  else 
+  else if(!menu.matches(".menu--visible"))
     nav.classList.remove('navBar--sticky');
   posicionY = scrollY;
 })

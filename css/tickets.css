@@ -2,7 +2,7 @@
 .navBar--fixed {position: fixed;}
 .menu--navbar li:last-child a {background-color: #28a744; color: white;}
 .ticket{margin-top: 15px; margin-bottom: 5px; gap: 30px;}
-.ticket__category {display: flex; gap: 5px; flex-wrap: wrap;}
+.ticket__category{display: flex; gap: 10px; flex-wrap: wrap;}
 .category{
   flex-basis: calc(25% - 15px);
   flex-grow: 1;
@@ -59,6 +59,7 @@
 
 @media screen and (max-width:992px) and (orientation: portrait){
   .ticket{gap: 50px;}
+  .ticket__category {max-width: 90%; margin: 0 auto;}
   .category{
     flex-wrap: wrap;
     aspect-ratio: 6/3;
@@ -70,7 +71,8 @@
   .form--ticket .ticket__buttons button {height: 40px;}
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
+  .ticket__category {max-width: 100%; margin: 0;}
   .category {gap: 5px; line-height: 1.1;}
 }
 

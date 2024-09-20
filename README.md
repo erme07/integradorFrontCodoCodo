@@ -12,7 +12,7 @@ Este proyecto consiste en lograr maquetar una web en base a un layout provisto m
 
 ## Layout replicado
 
-[DEMO](https://erme07.github.io/integradorFrontCodoCodo/)
+[DEMO](https://integradorfrontcodocodo.pages.dev/)
 
 ## Layout a replicar
 
